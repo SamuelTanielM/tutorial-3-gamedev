@@ -1,14 +1,51 @@
-[gd_scene load_steps=2 format=3 uid="uid://dsyfep1odrxje"]
+[gd_scene load_steps=3 format=3 uid="uid://dsyfep1odrxje"]
 
-[ext_resource type="PackedScene" path="res://Scenes/Ground.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://cq2e7gwujshfr" path="res://Scenes/Ground.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://clkm33s0sxo31" path="res://scenes/Player.tscn" id="2_bxyc4"]
 
 [node name="Root" type="Node2D"]
 
 [node name="Ground" parent="." instance=ExtResource("1")]
-position = Vector2(507.708, 363.86)
+position = Vector2(587.758, 526.86)
 
 [node name="Ground2" parent="." instance=ExtResource("1")]
-position = Vector2(789.149, 294.054)
+position = Vector2(869.199, 457.054)
 
 [node name="Ground3" parent="." instance=ExtResource("1")]
-position = Vector2(225.95, 294.562)
+position = Vector2(306, 457.562)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_bxyc4")]
+position = Vector2(391.05, 355)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_right = 317.0
+offset_bottom = 138.0
+text = "Arrow Up: Jump
+Arrow Down: Crouch
+Arrow Left/Right: Run Left/Right
+Shift: Slide
+2 Arrow Up: Double Jump
+2 Arrow Left/Right: Dash Left/Right
+Left-Click: Attack/Interact"
+fit_content = true
+
+[node name="Ground4" parent="." instance=ExtResource("1")]
+position = Vector2(25, 528)
+
+[node name="Ground5" parent="." instance=ExtResource("1")]
+position = Vector2(1153, 527)
+
+[node name="Ground6" parent="." instance=ExtResource("1")]
+position = Vector2(-81, 325)
+rotation = 1.57079
+scale = Vector2(2.60825, 1.99766)
+
+[node name="Ground7" parent="." instance=ExtResource("1")]
+position = Vector2(1231, 317)
+rotation = 1.57079
+scale = Vector2(2.60825, 1.99766)
+
+[node name="Ground8" parent="." instance=ExtResource("1")]
+position = Vector2(434, -78)
+rotation = 3.14159
+scale = Vector2(4.53146, 1.99766)
