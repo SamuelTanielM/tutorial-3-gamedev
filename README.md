@@ -1,10 +1,10 @@
 <h1>
-README: Implementasi Mekanika Pergerakan Karakter di Game Platformer
+Tutorial 3 - Introduction to Game Programming with GDScript for Implementing Basic 2D Game Mechanics
 </h1>
 
 ---
 
-Nama: Samuel Taniel Mulyadi
+Nama: Samuel Taniel Mulyadi<p></p>
 NPM: 2206081805
 
 <h2>Pendahuluan</h2>
