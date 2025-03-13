@@ -1,0 +1,161 @@
+/* Cursor customization */
+* {
+    cursor: url("https://img.itch.zone/aW1nLzE5NTg1ODI4LnBuZw==/original/kH5Sbt.png"), auto;
+}
+
+/* Hide unnecessary elements */
+.user_links {
+    display: none;
+}
+
+.footer_inner a[href="https://itch.io/profile/samueltaniel"] {
+    display: none;
+}
+
+.profile_banner {
+    animation: rotate360 20s linear infinite;
+    filter: drop-shadow(0px 8px 8px rgba(0, 0, 0, 0.5));
+}
+
+@keyframes rotate360 {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Hover effect for the game thumbnail */
+
+.game_cell{
+background-color: #3c3c5c;
+height : 100%;
+overflow : hidden;
+filter: drop-shadow(0px 8px 8px rgba(0, 0, 0, 0.5));
+transition: 0.3s ease;
+border-radius: 8px;
+}
+
+.game_cell:hover{
+transform: scale(1.05);
+}
+
+.game_grid_widget .game_cell .web_flag{
+background-color: #717171;
+color: #e3e3e3;
+padding: 4px;
+margin: 0px 6px 0px 0px;
+font-weight: bold;
+}
+.game_cell_data{
+padding: 0px 10px 10px;
+}
+.text_header{
+text-align: center;
+}
+.user_profile{
+text-align: center;
+}
+.user_links{
+text-align: center;
+}
+.game_platform{
+position: absolute;
+right: 8px;
+bottom: 12px;
+}
+
+a:hover{
+color: white;
+}
+a{
+transition: 0.2s;
+}
+.footer {
+border-top: 0px;
+background-color: #525262;
+}
+
+
+
+
+
+/* Center and style text */
+.inner_column.text_header {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.inner_column.text_header h1 {
+    font-size: 3rem; /* Adjust the font size as needed */
+    font-weight: bold;
+    animation: glitter 3s infinite;
+}
+
+/* Add animations for various sections */
+.header {
+    animation: rotation3s ease-out alternate infinite;
+}
+
+/*.footer {
+    animation: rotation 3s ease-out alternate infinite;
+}*/
+
+.profile_column {
+    animation: rotation 3s ease-out alternate infinite;
+}
+
+.game_grid_widget {
+    animation: rotation 3s ease-in alternate infinite;
+}
+
+.collection_row {
+    animation: rotation 4s ease-out alternate infinite;
+}
+
+
+/* Animations */
+@keyframes glitter {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(-0.7deg);
+    }
+    100% {
+        transform: rotate(0.7deg);
+    }
+}
+
+@keyframes floating {
+    from {
+        transform: translate(0, 0px);
+    }
+    50% {
+        transform: translate(0, 10px);
+    }
+    to {
+        transform: translate(0, -0px);
+    }
+}
+
+.game_list_widget.game_grid_widget.base_widget.game_list{
+    overflow: visible !important;
+}
+
+.carousel_wrapper{
+    overflow: visible !important;
+}
+
+
+

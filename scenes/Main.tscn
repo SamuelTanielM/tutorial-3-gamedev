@@ -1,21 +1,25 @@
-[gd_scene load_steps=3 format=3 uid="uid://dsyfep1odrxje"]
+[gd_scene load_steps=6 format=3 uid="uid://dsyfep1odrxje"]
 
-[ext_resource type="PackedScene" uid="uid://cq2e7gwujshfr" path="res://Scenes/Ground.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://cq2e7gwujshfr" path="res://scenes/Ground.tscn" id="1"]
 [ext_resource type="PackedScene" uid="uid://clkm33s0sxo31" path="res://scenes/Player.tscn" id="2_bxyc4"]
+[ext_resource type="AudioStream" uid="uid://w3nbwj7tjpln" path="res://assets/bowbowbow.wav" id="3_2ktup"]
+[ext_resource type="AudioStream" uid="uid://d1u7t3i6pvni6" path="res://assets/assets_sound_bgm.wav" id="3_klawr"]
+[ext_resource type="PackedScene" uid="uid://kiub84iwls37" path="res://scenes/ball.tscn" id="5_ccy0b"]
 
 [node name="Root" type="Node2D"]
 
 [node name="Ground" parent="." instance=ExtResource("1")]
-position = Vector2(587.758, 526.86)
+position = Vector2(587.758, 527)
 
 [node name="Ground2" parent="." instance=ExtResource("1")]
-position = Vector2(869.199, 457.054)
+position = Vector2(868, 527)
 
 [node name="Ground3" parent="." instance=ExtResource("1")]
-position = Vector2(306, 457.562)
+position = Vector2(306, 527)
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("2_bxyc4")]
+[node name="player" parent="." instance=ExtResource("2_bxyc4")]
 position = Vector2(391.05, 355)
+scale = Vector2(1, 0.981702)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 offset_right = 317.0
@@ -23,17 +27,37 @@ offset_bottom = 138.0
 text = "Arrow Up: Jump
 Arrow Down: Crouch
 Arrow Left/Right: Run Left/Right
-Shift: Slide
+Shift: Kick
 2 Arrow Up: Double Jump
 2 Arrow Left/Right: Dash Left/Right
-Left-Click: Attack/Interact"
+Left-Click: Attack/Interact
+
+Move Right to hear the second music
+Added Sound Effects for each Actions and feedback from hitting the ball
+Create player with new animated sprite
+Create ball with new animated sprite"
 fit_content = true
 
 [node name="Ground4" parent="." instance=ExtResource("1")]
-position = Vector2(25, 528)
+position = Vector2(25, 527)
+
+[node name="Ground10" parent="." instance=ExtResource("1")]
+position = Vector2(2567.76, 527)
+
+[node name="Ground12" parent="." instance=ExtResource("1")]
+position = Vector2(2286, 527)
+
+[node name="Ground13" parent="." instance=ExtResource("1")]
+position = Vector2(2005, 527)
 
 [node name="Ground5" parent="." instance=ExtResource("1")]
 position = Vector2(1153, 527)
+
+[node name="Ground9" parent="." instance=ExtResource("1")]
+position = Vector2(1720.76, 527)
+
+[node name="Ground11" parent="." instance=ExtResource("1")]
+position = Vector2(1439, 527)
 
 [node name="Ground6" parent="." instance=ExtResource("1")]
 position = Vector2(-81, 325)
@@ -41,11 +65,27 @@ rotation = 1.57079
 scale = Vector2(2.60825, 1.99766)
 
 [node name="Ground7" parent="." instance=ExtResource("1")]
-position = Vector2(1231, 317)
+position = Vector2(2812, 293)
 rotation = 1.57079
 scale = Vector2(2.60825, 1.99766)
 
 [node name="Ground8" parent="." instance=ExtResource("1")]
 position = Vector2(434, -78)
 rotation = 3.14159
-scale = Vector2(4.53146, 1.99766)
+scale = Vector2(13.4121, 2.24092)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(12, 24)
+stream = ExtResource("3_klawr")
+autoplay = true
+max_distance = 1500.0
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(2707, 19)
+stream = ExtResource("3_2ktup")
+volume_db = 10.895
+autoplay = true
+max_distance = 1500.0
+
+[node name="Ball" parent="." instance=ExtResource("5_ccy0b")]
+position = Vector2(788, 237)

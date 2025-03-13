@@ -86,3 +86,52 @@ Fitur-fitur ini meningkatkan pengalaman bermain dengan memberikan kontrol karakt
 
 - Dokumentasi resmi Godot: https://docs.godotengine.org/
 
+---
+
+<h1>Tutorial 5 - Assets Creation & Integration</h1>
+
+---
+
+<h2>Latihan Mandiri: Membuat dan Menambah Variasi Aset</h2>
+
+---
+
+<p>Dalam latihan ini, saya telah mengimplementasikan berbagai fitur baru ke dalam permainan:</p>
+
+```md
+1. Penggantian Sprite2D Player dengan Sprite Baru
+   - Saya mengganti sprite karakter utama dengan sprite baru dan menambahkan animasi yang sesuai menggunakan spritesheet.
+
+2. Pembuatan Objek Bola dengan AnimatedSprite
+   - Saya membuat objek bola yang memiliki AnimatedSprite, sehingga bisa memiliki animasi tersendiri.
+
+3. Penambahan Audio Dinamis
+   - Saya menambahkan musik latar yang berubah volume tergantung jarak pemain dari area tertentu.
+   - Jika pemain semakin jauh dari posisi awal level, musik lain akan terdengar lebih jelas dan musik sebelumnya semakin samar.
+
+4. Penambahan Efek Suara
+   - Efek suara ditambahkan untuk berbagai aksi karakter seperti dash, lompat, dan serangan.
+
+5. Interaksi antara Objek Bola dan Player
+   - Saat player menabrak bola, bola akan tersundul atau tertendang berdasarkan arah tabrakan.
+
+6. Audio Feedback dari Interaksi Bola dan Player
+   - Saat bola ditabrak oleh pemain, efek suara khusus akan dimainkan untuk memberikan feedback audio kepada pemain.
+```
+
+<h2>Ide Tambahan yang Dikembangkan</h2>
+
+---
+
+- Sistem audio berbasis posisi objek (misalnya, efek suara terdengar lebih kuat jika objek mendekati pemain).
+- Efek visual tambahan untuk memperjelas aksi pemain dan objek di dalam game.
+- Penyesuaian parameter fisika bola agar lebih realistis dalam interaksi dengan dunia game.
+
+
+<h2>Kesimpulan</h2>
+
+---
+
+<p> Dengan menambahkan variasi aset seperti animasi, efek suara, dan interaksi objek, pengalaman bermain menjadi lebih dinamis dan menarik. Integrasi elemen-elemen ini memberikan feedback yang lebih baik bagi pemain dan meningkatkan imersi dalam permainan. </p>
+
+---

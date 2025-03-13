@@ -11,6 +11,11 @@ extends CharacterBody2D
 @export var slide_speed = 500  # Speed of the slide
 @export var slide_duration = 0.2  # How long the slide lasts
 
+@onready var a_dash = $dash
+@onready var a_attack = $attack
+@onready var a_slide = $slide
+@onready var a_jump = $jump
+
 var attack_timer = 0.0
 var is_attacking = false  # Track if the player is currently attacking
 var is_dashing = false  # Track if the player is currently dashing
@@ -67,6 +72,7 @@ func start_attack():
 	is_attacking = true
 	attack_timer = attack_cooldown
 	anim.play("attack")
+	a_attack.play()  # Play attack sound
 
 func handle_attack_animation():
 	# Check if the attack animation has finished
@@ -82,10 +88,12 @@ func double_jump():
 			jump_count += 1
 			velocity.y = jump_speed
 			anim.play("jump")  # Play jump animation
+			a_jump.play()  # Play jump sound
 		elif jump_count == 1:
 			jump_count = 0
 			velocity.y = jump_speed
 			anim.play("jump")  # Play jump animation
+			a_jump.play()  # Play jump sound
 
 func dash(delta):
 	time_since_last_input += delta
@@ -112,6 +120,7 @@ func start_dash(direction):
 	dash_timer = dash_duration
 	dash_direction = direction
 	anim.play("dash")  # Play dash animation if available
+	a_dash.play()  # Play dash sound
 
 func handle_dash(delta):
 	dash_timer -= delta
@@ -133,6 +142,7 @@ func start_slide(direction):
 	slide_timer = slide_duration
 	slide_direction = direction
 	anim.play("sliding")  # Play sliding animation if available
+	a_slide.play()  # Play slide sound
 
 func handle_slide(delta):
 	slide_timer -= delta
